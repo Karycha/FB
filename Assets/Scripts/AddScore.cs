@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class AddScore : MonoBehaviour
 {
-    private void OnTriggerExit2D(Collider2D other)
+    
+    private void OnTriggerEnter2D(Collider2D col)
     {
+        
+       
         GameManager.Instance.UpdateScore();
         Destroy(gameObject);
     }
-
+     
 }
